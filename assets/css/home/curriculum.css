@@ -31,3 +31,7 @@
   border-radius: 0.34rem;
   border: 2px solid var(--secondary-color);
 }
+.section-curriculum .curriculo:hover {
+  border: 2px solid var(--highlight-color);
+  color: var(--highlight-color);
+}

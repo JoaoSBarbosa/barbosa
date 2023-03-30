@@ -21,13 +21,17 @@
         <h1>João <span class="secondary-color">Barbosa</span>.</h1>
       </div>
       <nav class="menu">
-        <button id="btnMobile">
+        <button
+          aria-label="Abrir menu"
+          id="btnMobile"
+          aria-haspopup="true"
+          aria-controls="menu-navigation"
+          aria-expanded="false"
+        >
           Menu
-          <span id="hamburger">
-
-          </span>
+          <span id="hamburger"> </span>
         </button>
-        <ul class="menu-navigation flex-row secondary-color">
+        <ul class="menu-navigation flex-row secondary-color" role="menu">
           <li><a href="#home">Home</a></li>
           <li><a href="#experiencia">Experiência</a></li>
           <li><a href="#formacao">Formação</a></li>
