@@ -16,7 +16,6 @@
 }
 .section-curriculum div h2,
 .section-curriculum div p {
-  font-family: "Poppins", sans-serif;
   color: var(--tertiary-color);
 }
 .section-curriculum div h2 {
@@ -25,10 +24,10 @@
 .section-curriculum div p {
   font-weight: 200;
 }
-.section-curriculum .curriculo{
-   justify-self: start;
-   color: var(--secondary-color);
-   padding: 0.93rem 2.5rem;
-   border-radius: 0.34rem;
-   border: 2px solid var(--secondary-color);
+.section-curriculum .curriculo {
+  justify-self: start;
+  color: var(--secondary-color);
+  padding: 0.93rem 2.5rem;
+  border-radius: 0.34rem;
+  border: 2px solid var(--secondary-color);
 }

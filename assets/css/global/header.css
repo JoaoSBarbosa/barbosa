@@ -9,29 +9,101 @@ header h1 {
   font-size: 2.5rem;
 }
 
-.menu .menu-navigation {
+.menu-navigation {
   align-items: center;
   gap: var(--gap);
 }
 #btnMobile {
   display: none;
 }
-.menu .menu-navigation li a {
+.menu-navigation li a {
   padding: var(--gap);
   font-size: 1.3rem;
+  display: inline-block;
+  position: relative;
+}
+.menu-navigation li a::after {
+  content: "";
+  background-color: var(--highlight-color);
+  height: 2px;
+  width: 0%;
+  display: block;
+  margin-top: 4px;
+  transition: all ease 0.4s;
+  position: absolute;
+}
+.menu-navigation li a:hover::after {
+  width: 80%;
+  color: #fff;
 }
 
 @media (max-width: 920px) {
-  header h1 {
-    font-size: 2rem;
-  }
-  .menu .menu-navigation li a {
-    font-size: 1rem;
-  }
+
   .menu .menu-navigation {
-    display: none;
+    display: block;
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+    top: 70px;
+    right: 0;
+    background-color: #0a090b;
+    height: 0;
+    transition: 0.6s;
+    overflow-y: hidden;
+    visibility: hidden;
   }
+  .menu.ativo .menu-navigation {
+    display: block;
+    height: calc(100vh - 70px);
+    visibility: visible;
+    overflow-y: auto;
+  }
+  .menu-navigation li a {
+    padding: 1rem 0;
+    margin: 0 1rem;
+  }
+  .menu-navigation li:hover {
+    background-color: #141316;
+  }
+  .menu-navigation li a:hover::after {
+    width: 100%;
+  }
+
   #btnMobile {
     display: flex;
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    border: none;
+    background: none;
+    color: var(--highlight-color);
+    cursor: pointer;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  #hamburger {
+    display: block;
+    width: 30px;
+    border-top: 3px solid;
+  }
+  #hamburger::after,
+  #hamburger::before {
+    content: "";
+    width: 30px;
+    height: 3px;
+    display: block;
+    background: currentColor;
+    margin-top: .5rem;
+    position: relative;
+    transition: all ease .3s;
+  }
+  .menu.ativo #hamburger {
+    border-top-color: transparent;
+  }
+  .menu.ativo #hamburger::before{
+    transform: rotate(135deg);
+  }
+  .menu.ativo #hamburger::after{
+    transform: rotate(-135deg);
+    top: -10px;
   }
 }
