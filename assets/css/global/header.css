@@ -1,0 +1,15 @@
+header{
+   padding: var(--gap); /*10px*/
+   justify-content: space-around;
+   background-color: var(--primary-color);
+}
+
+header h1{
+   color: #73c2eb;
+   font-size: 2.5rem;
+}
+
+.menu .menu-navigation{
+   align-items: center;
+   gap: var(--gap);
+}
