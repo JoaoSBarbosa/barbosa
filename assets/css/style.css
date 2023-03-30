@@ -1,8 +1,9 @@
 @import 'global/header.css';
 @import 'global/global.css';
 @import 'global/footer.css';
-@import 'home/';
+@import 'home/curriculum.css';
 @import 'utility/colors.css';
 @import 'utility/models.css';
+@import ''
 
 

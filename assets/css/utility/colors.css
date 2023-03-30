@@ -1,6 +1,8 @@
 :root{
    --primary-color: #000;
    --secondary-color: #fff;
+   --tertiary-color: #f7f7f7;
+   --highlight-color: #711CDB;
 }
 
 .primary-color{
@@ -8,4 +10,7 @@
 }
 .secondary-color{
    color: var(--secondary-color);
+}
+.tertiary-color{
+   color: var(--tertiary-color);
 }

@@ -1,15 +1,37 @@
-header{
-   padding: var(--gap); /*10px*/
-   justify-content: space-around;
-   background-color: var(--primary-color);
+header {
+  padding: var(--gap); /*10px*/
+  justify-content: space-around;
+  background-color: var(--primary-color);
 }
 
-header h1{
-   color: #73c2eb;
-   font-size: 2.5rem;
+header h1 {
+  color: var(--highlight-color);
+  font-size: 2.5rem;
 }
 
-.menu .menu-navigation{
-   align-items: center;
-   gap: var(--gap);
+.menu .menu-navigation {
+  align-items: center;
+  gap: var(--gap);
+}
+#btnMobile {
+  display: none;
+}
+.menu .menu-navigation li a {
+  padding: var(--gap);
+  font-size: 1.3rem;
+}
+
+@media (max-width: 920px) {
+  header h1 {
+    font-size: 2rem;
+  }
+  .menu .menu-navigation li a {
+    font-size: 1rem;
+  }
+  .menu .menu-navigation {
+    display: none;
+  }
+  #btnMobile {
+    display: flex;
+  }
 }
