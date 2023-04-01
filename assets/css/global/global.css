@@ -34,3 +34,20 @@ img {
   opacity: 1;
   transform: translate3d(0, 0, 0);
 }
+.scroll-button {
+  background-color: var(--highlight-color);
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 999;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  color: var(--white-color);
+  display: none;
+}

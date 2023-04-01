@@ -42,18 +42,21 @@ main .about {
   background-color: var(--highlight-color);
 }
 .about img {
-   animation: sideSection .5s ease-in-out forwards;
+  animation: sideSection 0.5s ease-in-out forwards;
   cursor: pointer;
   grid-row: 2;
   max-width: 100%;
-  filter: blur(0);
+  opacity: 0.7;
+  border: 2px solid transparent;
+  border-radius: 50%;
 }
 .about img:hover {
-  transition: all ease 0.6s;
-  filter: blur(1px);
+  opacity: 0.8;
+  border: 2px solid #4f4f4f;
+  border-radius: 50%;
 }
 .about-content {
-   animation: aboutSection .6s ease-in-out forwards;
+  animation: aboutSection 0.6s ease-in-out forwards;
   grid-column: 2/-1;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -123,5 +126,38 @@ main .about {
   }
   to {
     transform: translate3d(0, 0, 0);
+  }
+}
+
+@media (max-width: 992px) {
+  .about img {
+    grid-column: 1/-1;
+    justify-self: center;
+    max-width: 50%;
+  }
+
+  .about-content {
+    grid-column: 1/-1;
+  }
+}
+@media (max-width: 760px) {
+  .about-info {
+    grid-template-columns: 1fr;
+  }
+  .about-info a {
+    position: relative;
+  }
+  .about-info a::after {
+    content: "";
+    background-color: var(--highlight-color);
+    height: 2px;
+    width: 0%;
+    display: block;
+    transition: ease 0.3s;
+    margin-top: 5px;
+    position: absolute;
+  }
+  .about-info a:hover::after {
+    width: 100%;
   }
 }
