@@ -1,4 +1,5 @@
 .section-curriculum {
+  animation: init 0.7s forwards;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-content: space-around;
@@ -21,6 +22,13 @@
 .section-curriculum div h2 {
   font-weight: 600;
 }
+.section-curriculum .typing::after {
+  content: "|";
+  margin-left: 0.31rem;
+  opacity: 1;
+  animation: blink 0.6s infinite;
+  color: var(--highlight-color);
+}
 .section-curriculum div p {
   font-weight: 200;
 }
@@ -31,7 +39,41 @@
   border-radius: 0.34rem;
   border: 2px solid var(--secondary-color);
 }
+.developer-photo img {
+  opacity: 0.7;
+}
+.developer-photo img:hover {
+  opacity: 0.8;
+}
 .section-curriculum .curriculo:hover {
   border: 2px solid var(--highlight-color);
   color: var(--highlight-color);
+}
+
+@keyframes init {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -60px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes blink {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 920px) {
+  .section-curriculum {
+    animation: init 0.7s forwards;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 }
