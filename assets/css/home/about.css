@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap");
+
+main {
+  background-color: var(--bg-color);
+}
+main .about {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.87rem;
+  justify-content: center;
+  padding: 2.5rem;
+  margin-top: 3.75rem;
+}
+.about-title {
+  margin: 1.87rem 0;
+  grid-column: 1/-1;
+  text-align: center;
+  color: var(--secondary-color);
+}
+.about-title h1 {
+  font-size: 2.5rem;
+  color: var(--highlight-color);
+  margin-bottom: 0.93rem;
+  font-family: "Berkshire Swash", cursive;
+}
+.about-title p {
+  color: var(--accent-color);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+.about-title div {
+  display: flex;
+  justify-content: center;
+  gap: var(--gap);
+}
+.about-title span {
+  display: block;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: var(--highlight-color);
+}
+.about img {
+   animation: sideSection .5s ease-in-out forwards;
+  cursor: pointer;
+  grid-row: 2;
+  max-width: 100%;
+  filter: blur(0);
+}
+.about img:hover {
+  transition: all ease 0.6s;
+  filter: blur(1px);
+}
+.about-content {
+   animation: aboutSection .6s ease-in-out forwards;
+  grid-column: 2/-1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  color: var(--accent-color);
+}
+
+.about-text {
+  display: grid;
+  grid-column: 1/-1;
+  grid-template-columns: var(--two-columns);
+}
+.about-text h1 {
+  font-size: 2.3rem;
+  color: var(--secondary-color);
+  grid-column: 1/-1;
+}
+.about-text h1::after {
+  content: "";
+  background-color: var(--highlight-color);
+  height: 6px;
+  width: 60px;
+  margin: 20px 0;
+  display: block;
+  border-radius: 5px;
+}
+.about-text p {
+  font-size: 1.3rem;
+  grid-row: 2;
+  grid-column: 1/-1;
+}
+.about-info {
+  margin-top: 1.87rem;
+  display: grid;
+  grid-template-columns: var(--two-columns);
+  grid-column: 1/-1;
+  gap: 15px;
+  align-items: center;
+}
+.about-info p {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+}
+.about-info i,
+.about-info a:hover {
+  color: var(--highlight-color);
+}
+.about-info i {
+  display: inline-block;
+  padding-right: 15px;
+  font-size: 1.5rem;
+}
+
+@keyframes aboutSection {
+  from {
+    transition: all ease 0.5s;
+    transform: translate3d(60px, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes sideSection {
+  from {
+    transition: all ease 0.5s;
+    transform: translate3d(-60px, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}

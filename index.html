@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>João Barbosa</title>
+    <script>
+      document.documentElement.className += " js";
+    </script>
     <link rel="stylesheet" href="assets/css/style.css" />
 
     <!--Google Fontes-->
@@ -13,6 +16,14 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700&display=swap"
       rel="stylesheet"
+    />
+    <!--Font-awesome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
   </head>
   <body>
@@ -42,27 +53,35 @@
     </header>
     <section
       aria-label="Seção curriculo download João Barbosa"
-      class="section-curriculum"
+      class="section-curriculum js-scroll"
     >
       <div>
         <h2>Olá ! Eu sou</h2>
         <h2 class="typing">Desenvolvedor Front-End Júnior</h2>
         <p>
           Sou um desenvolvedor front-end júnior estudando para me tornar um dev
-          full-stack. Desenvolvo pequenos projetos utilizando <strong>HTML</strong>,
-          <strong>CSS</strong>, <strong>Sass</strong>, <strong>JavaScript</strong>,
-          <strong>TypeScript</strong>, <strong>React-js</strong> e
-          <strong>Wordpress</strong>. Alguns exemplos de projetos desenvolvidos são:
-          <a href="https://barbosapizzas.netlify.app/" target="_blank" title="Projeto pizzaria"
+          full-stack. Desenvolvo pequenos projetos utilizando
+          <strong>HTML</strong>, <strong>CSS</strong>, <strong>Sass</strong>,
+          <strong>JavaScript</strong>, <strong>TypeScript</strong>,
+          <strong>React-js</strong> e <strong>Wordpress</strong>. Alguns
+          exemplos de projetos desenvolvidos são:
+          <a
+            href="https://barbosapizzas.netlify.app/"
+            target="_blank"
+            title="Projeto pizzaria"
             ><strong>Pizzaria</strong></a
           >
           e
           <a
             href="https://joaosbarbosa.github.io/bakcraft-project/"
-            target="_blank" title="Site Bikcraft"
+            target="_blank"
+            title="Site Bikcraft"
             ><strong>Bikcraft</strong> </a
           >. Em Wordpress, contribui na construção e manutenção do site
-          <a href="https://beerfanstore.com.br/" target="_blank" title="Site Beerfan"
+          <a
+            href="https://beerfanstore.com.br/"
+            target="_blank"
+            title="Site Beerfan"
             ><strong>Beerfanstore</strong></a
           >
         </p>
@@ -72,6 +91,67 @@
         <img src="assets/img/foto3.png" alt="Foto de João Barbosa" />
       </figure>
     </section>
+    <main class="js-scroll">
+      <article aria-label="Seção sobre mim" class="about">
+        <div class="about-title">
+          <h1>Sobre Mim</h1>
+          <p>Perfil profissional</p>
+          <div aria-label="Seção de ilustrações de botões">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <img src="assets/img/foto5.png" alt="Segunda foto de João Barbosa" />
+        <div class="about-content">
+          <div class="about-text">
+            <h1>Eu sou João Barbosa</h1>
+            <p>
+              Profissional graduando análise e desenvolvimento de sistemas e com
+              habilidades em front-end (JavaScript, TypeScript, React-js, CSS3,
+              Sass,HTML5), back-end (Java, PHP, MySQL) e versionamento
+              GIT/GITHUB. <br />
+              <br />
+              Profissional altamente capacitado para trabalhar em equipe,
+              dinâmico, com iniciativa, facilidade de aprendizado e de bom
+              relacionamento interpessoal, dedicado às funções, focado em
+              resultados e redução de custos. Organizado, responsável e com
+              facilidade em adaptar-se à mudanças.
+            </p>
+          </div>
+
+          <div class="about-info">
+            <p>
+              <i class="fa-solid fa-calendar-days"></i>
+              Idade: 30 anos
+            </p>
+            <p>
+              <i class="fa-solid fa-location-dot"></i>
+              Endereço: Jardim Itapuã - Itaquaquecetuba -SP
+            </p>
+            <p>
+              <i class="fa-solid fa-flag"></i>
+              Nacionalidade: Brasileiro
+            </p>
+
+            <p>
+              <i class="fa-solid fa-earth-americas"></i>
+              Inglês: Técnico
+            </p>
+            <p>
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:email@provedor.com.br"
+                >contato.jsbarbosa@gmail.com
+              </a>
+            </p>
+            <p>
+              <i class="fa-solid fa-phone-volume"> </i>
+              <a href="tel:+5511994537464"> 11 9 99453-7464 </a>
+            </p>
+          </div>
+        </div>
+      </article>
+    </main>
 
     <script src="assets/js/script.js"></script>
   </body>

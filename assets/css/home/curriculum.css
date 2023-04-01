@@ -25,11 +25,6 @@
 .section-curriculum div h2 {
   font-weight: 600;
 }
-.section-curriculum div span {
-}
-.section-curriculum div a {
-  border-bottom: 2px solid #fff;
-}
 
 .section-curriculum div a:hover {
   border-bottom: 2px solid var(--highlight-color);

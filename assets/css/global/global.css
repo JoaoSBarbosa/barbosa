@@ -1,5 +1,6 @@
-:root{
+:root {
   --gap: 0.65rem;
+  --two-columns: 1fr 1fr;
 }
 * {
   box-sizing: border-box;
@@ -12,7 +13,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   font-family: "Poppins", sans-serif;
-  
+  background-color: var(--primary-color);
 }
 
 a {
@@ -22,4 +23,14 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
+}
+
+.js .js-scroll {
+  opacity: 0;
+  transform: translate3d(-60px, 0, 0);
+  transition: all ease 0s;
+}
+.js .js-scroll.ativo {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
 }
