@@ -3,6 +3,9 @@
 @import 'global/footer.css';
 @import 'home/curriculum.css';
 @import 'home/about.css';
+@import 'home/services.css';
+@import 'home/projects.css';
+
 
 @import 'utility/colors.css';
 @import 'utility/models.css';

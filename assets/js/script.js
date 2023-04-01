@@ -78,3 +78,23 @@ function scrollBtn() {
   window.addEventListener("scroll", hiddenBtn);
 }
 scrollBtn();
+
+// Links internos
+
+function initLinksInterno() {
+  const links = document.querySelectorAll('.menu-navigation a[href^="#"');
+
+  function scrollToSection(e) {
+    e.preventDefault();
+    const href = e.currentTarget.getAttribute("href");
+    const section = document.querySelector(href);
+    section.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }
+  links.forEach((link) => {
+    link.addEventListener("click", scrollToSection);
+  });
+}
+initLinksInterno();
