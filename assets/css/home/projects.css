@@ -13,6 +13,7 @@
   width: 100%;
   object-fit: cover;
   object-position: top;
+  margin: 0.8rem 0;
 }
 .projects-card ul {
   display: grid;
@@ -26,17 +27,65 @@
   display: grid;
   gap: 30px;
   text-align: center;
-  /* max-width: 300px; */
   height: max-content;
   align-content: center;
   background-color: #222;
   border-radius: 4px;
+}
+.projects-card li::before {
+  content: "";
+  border-radius: 4px;
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  border-top: 2px solid transparent;
+  border-right: 2px solid transparent;
+  transition: 0.5s ease-in-out;
+}
+.projects-card li::after {
+  content: "";
+  border-radius: 4px;
+  width: 0;
+  height: 0;
+  position: absolute;
+  bottom: -2px;
+  left: -2px;
+  border-bottom: 2px solid transparent;
+  border-left: 2px solid transparent;
+  transition: 0.5s ease-in-out;
+}
+.projects-card li:hover::before {
+  width: 100%;
+  height: 100%;
+  border-top: 2px solid var(--highlight-color);
+  border-right: 2px solid var(--highlight-color);
+}
+.projects-card li:hover::after {
+  width: 100%;
+  height: 100%;
+  border-bottom: 2px solid var(--highlight-color);
+  border-left: 2px solid var(--highlight-color);
+}
+
+.projects-card ul li h3 {
+  color: var(--secondary-color);
+  font-size: 1.4rem;
+  font-weight: 500;
 }
 .projects-card ul p {
   text-align: initial;
 }
 .projects-card ul li i {
   font-size: 2rem;
+  color: var(--highlight-color);
+}
+.projects-tec {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 1rem;
 }
 
 @media (max-width: 992px) {

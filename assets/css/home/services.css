@@ -2,7 +2,7 @@
   color: aliceblue;
   margin-top: -30px;
   padding: 60px;
-  background-color: #151515;
+  background-color: var(--bg-color);
 }
 
 .experience {
@@ -13,9 +13,20 @@
   border-radius: 4px;
   position: relative;
   gap: 10px 20px;
-  background-color: #222;
 }
-.experience::before {
+.card-experiencia {
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 20px;
+  margin-top: 10px;
+  background-color: #222;
+  position: relative;
+  padding: 20px;
+  margin-bottom: 4rem;
+  border-radius: 5px;
+}
+.card-experiencia::before {
   content: "";
   display: block;
   width: 4px;
@@ -25,23 +36,20 @@
   left: -4px;
   top: 20px;
 }
-.empresa-ano {
-  position: absolute;
-  top: 22px;
-  left: 56px;
-  font-size: 0.8rem;
-  text-align: right;
+.experience h3 {
+  grid-column: 1/-1;
 }
+
+.empresa-ano {
+  font-size: 0.9rem;
+}
+
 .empresa-titulo {
   font-size: 1.125rem;
   line-height: 1.1;
   font-weight: 700;
 }
-.empresa-texto {
-  font-size: 0.875rem;
-  line-height: 1.4;
-  color: var(--accent-color);
-}
+
 .empresa-habilidades {
   display: flex;
   flex-wrap: wrap;
@@ -54,6 +62,180 @@
   border-radius: 4px;
   background-color: var(--accent-color);
   padding: 5px 10px;
+}
+.projetos-empresa {
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-bottom: 4rem;
+}
+.projetos-empresa-titulo {
+  position: relative;
+  padding: 0 5px;
+}
+.projetos-empresa-titulo::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 4px;
+  background: linear-gradient(#a839ff, #701cda);
+  position: absolute;
+}
+.projetos-jobs {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+  border-radius: 5px;
+}
+.jobs-list {
+  height: 570px;
+  overflow-y: scroll;
+  grid-column: 1/2;
+}
+
+.jobs-list li {
+  border-radius: 5px;
+  cursor: pointer;
+  filter: grayscale(20%);
+  border: 2px solid transparent;
+  position: relative;
+}
+.jobs-list li:nth-child(n + 2) {
+  margin-top: 20px;
+}
+
+.jobs-list li img {
+  height: 100%;
+  border-radius: 5px;
+}
+
+.jobs-list li::before {
+  content: "";
+  border-radius: 5px;
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  border-top: 2px solid transparent;
+  border-right: 2px solid transparent;
+  transition: 0.5s ease-in-out;
+}
+.jobs-list li::after {
+  content: "";
+  border-radius: 5px;
+  width: 0;
+  height: 0;
+  position: absolute;
+  bottom: -2px;
+  left: -2px;
+  border-bottom: 2px solid transparent;
+  border-left: 2px solid transparent;
+  transition: 0.5s ease-in-out;
+}
+
+.jobs-list li:hover::before {
+  width: 100%;
+  height: 100%;
+  border-top: 2px solid var(--highlight-color);
+  border-right: 2px solid var(--highlight-color);
+}
+.jobs-list li:hover::after {
+  width: 100%;
+  height: 100%;
+  border-bottom: 2px solid var(--highlight-color);
+  border-left: 2px solid var(--highlight-color);
+}
+
+.jobs-list::-webkit-scrollbar {
+  width: 18px;
+}
+.jobs-list::-webkit-scrollbar-thumb {
+  background: var(--highlight-color);
+  border-left: 4px solid var(--bg-color);
+  border-right: 4px solid var(--bg-color);
+  border-radius: 7px;
+}
+.jobs-list::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+.jobs-description {
+  background-color: #222;
+  padding: 20px;
+  border-radius: 5px;
+  color: var(--accent-color);
+}
+.jobs-description section {
+  display: flex;
+  flex-direction: column;
+}
+.jobs-description h2 {
+  text-align: center;
+  text-transform: uppercase;
+}
+.jobs-description h2 i {
+  color: var(--highlight-color);
+}
+.jobs-description h3,
+.jobs-description h2,
+.btn {
+  color: var(--secondary-color);
+}
+.jobs-description h3 {
+  margin: 1rem 0;
+}
+.activities li {
+  position: relative;
+  margin-left: 16px;
+}
+.activities li::before {
+  content: "";
+  width: 8px;
+  height: 4px;
+  background-color: var(--highlight-color);
+  display: block;
+  left: -12px;
+  top: 10px;
+  position: absolute;
+}
+.tec {
+  display: flex;
+  justify-content: space-around;
+  margin: 1.5rem 0;
+  font-size: 1.5rem;
+}
+.tec i:hover {
+  color: var(--highlight-color);
+}
+.btn {
+  padding: 10px 30px;
+  display: inline-block;
+  background-color: var(--highlight-color);
+  max-width: max-content;
+  align-self: center;
+  border-radius: 5px;
+}
+.btn:hover {
+  background-color: #4f1c8d;
+}
+.js .js-tabcontent section {
+  display: none;
+}
+.js .js-tabcontent section.ativo {
+  display: flex;
+  animation: show 0.5s forwards;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    transform: rotate3d(-30px, 0, 0);
+  }
+  from {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 @media (max-width: 760px) {

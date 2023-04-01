@@ -98,3 +98,29 @@ function initLinksInterno() {
   });
 }
 initLinksInterno();
+
+// Lista projetos
+
+function initTabNav() {
+  const tabMenu = document.querySelectorAll(".js-tabmenu li");
+  const tabConteudo = document.querySelectorAll(".js-tabcontent section");
+  const activeClass = "ativo";
+
+  if (tabMenu.length && tabConteudo.length) {
+    tabConteudo[0].classList.add(activeClass);
+
+    tabMenu.forEach((itemMenu, index) => {
+      itemMenu.addEventListener("click", () => {
+        activeTab(index);
+      });
+    });
+
+    function activeTab(index) {
+      tabConteudo.forEach((section) => {
+        section.classList.remove(activeClass);
+      });
+      tabConteudo[index].classList.add(activeClass);
+    }
+  }
+}
+initTabNav();
