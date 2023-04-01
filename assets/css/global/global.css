@@ -51,3 +51,6 @@ img {
   color: var(--white-color);
   display: none;
 }
+.scroll-button i {
+  color: var(--secondary-color);
+}

@@ -55,3 +55,26 @@ function initAnimationScrool() {
   }
 }
 initAnimationScrool();
+
+function scrollBtn() {
+  function subirTela() {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  }
+
+  const scrollBtn = document.querySelector(".scroll-button");
+  scrollBtn.addEventListener("click", subirTela);
+
+  function hiddenBtn() {
+    if (window.scrollY === 0) {
+      document.querySelector(".scroll-button").style.display = "none";
+    } else {
+      document.querySelector(".scroll-button").style.display = "flex";
+    }
+  }
+  window.addEventListener("scroll", hiddenBtn);
+}
+scrollBtn();
