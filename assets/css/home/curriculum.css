@@ -19,8 +19,20 @@
 .section-curriculum div p {
   color: var(--tertiary-color);
 }
+.section-curriculum div p {
+  letter-spacing: 1.7px;
+}
 .section-curriculum div h2 {
   font-weight: 600;
+}
+.section-curriculum div span {
+}
+.section-curriculum div a {
+  border-bottom: 2px solid #fff;
+}
+
+.section-curriculum div a:hover {
+  border-bottom: 2px solid var(--highlight-color);
 }
 .section-curriculum .typing::after {
   content: "|";
