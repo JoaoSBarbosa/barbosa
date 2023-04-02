@@ -124,3 +124,39 @@ function initTabNav() {
   }
 }
 initTabNav();
+
+// Modal
+function initModal() {
+  const modal = document.querySelector("#janelaModal");
+  const closeModal = document.querySelector("#btnFechar");
+  const imgModal = document.querySelector(".container-modal img");
+  const textModal = document.querySelector(".textoModal");
+  const linkModal = document.querySelector(".linkModal");
+  const liModal = document.querySelectorAll(".projeto");
+  const modalHidde = document.querySelector(".modalHide");
+
+  function modalClique(e) {
+    // modalHidde.style.display = 'block';
+    const pModal = e.currentTarget.querySelector(".modalHide div");
+    const src = e.currentTarget.querySelector("img").getAttribute("src");
+
+    textModal.innerHTML = pModal.innerHTML;
+    modal.style.display = "flex";
+    imgModal.setAttribute("src", src);
+    const href = e.currentTarget
+      .querySelector(".modalHide a")
+      .getAttribute("href");
+    linkModal.setAttribute("href", href);
+  }
+
+  liModal.forEach((li) => {
+    li.addEventListener("click", modalClique);
+  });
+
+  function fecharModal() {
+    modal.style.display = "none";
+  }
+  closeModal.addEventListener("click", fecharModal);
+  fecharModal();
+}
+initModal();
