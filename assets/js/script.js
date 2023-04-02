@@ -148,9 +148,20 @@ function initModal() {
       .getAttribute("href");
     linkModal.setAttribute("href", href);
   }
+  // const tec = document.querySelector(".tec");
+  function tecHover(li) {
+    const tecDiv = li.currentTarget.querySelector(".tec");
+    tecDiv.classList.add("visible");
+  }
+  function tecOut(li) {
+    const tecDiv = li.currentTarget.querySelector(".tec");
+    tecDiv.classList.remove("visible");
+  }
 
   liModal.forEach((li) => {
     li.addEventListener("click", modalClique);
+    li.addEventListener("mouseover", tecHover);
+    li.addEventListener("mouseout", tecOut);
   });
 
   function fecharModal() {
