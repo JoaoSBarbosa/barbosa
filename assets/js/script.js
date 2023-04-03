@@ -127,28 +127,27 @@ initTabNav();
 
 // Modal
 function initModal() {
-  const modal = document.querySelector("#janelaModal");
+  const modal = document.querySelector("#janelaModal"); // Toda a div modal
+  // Botão fechar modal
   const closeModal = document.querySelector("#btnFechar");
+  // <img> no modal
   const imgModal = document.querySelector(".container-modal img");
+  // Div de texto modal
   const textModal = document.querySelector(".textoModal");
   const linkModal = document.querySelector(".linkModal");
   const liModal = document.querySelectorAll(".projeto");
   const modalHidde = document.querySelector(".modalHide");
 
   function modalClique(e) {
-    // modalHidde.style.display = 'block';
-    const pModal = e.currentTarget.querySelector(".modalHide div");
+    const pModal = e.currentTarget.querySelector(".modalHide");
+    const clone = pModal.cloneNode(true);
+    console.log(clone);
     const src = e.currentTarget.querySelector("img").getAttribute("src");
 
     textModal.innerHTML = pModal.innerHTML;
     modal.style.display = "flex";
     imgModal.setAttribute("src", src);
-    const href = e.currentTarget
-      .querySelector(".modalHide a")
-      .getAttribute("href");
-    linkModal.setAttribute("href", href);
   }
-  // const tec = document.querySelector(".tec");
   function tecHover(li) {
     const tecDiv = li.currentTarget.querySelector(".tec");
     tecDiv.classList.add("visible");
@@ -171,3 +170,5 @@ function initModal() {
   fecharModal();
 }
 initModal();
+
+

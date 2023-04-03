@@ -8,12 +8,9 @@ img {
   margin-top: -30px;
   padding: 60px;
   border-radius: 4px;
-
-  /* border: 2px solid red; */
 }
 .projects-card {
   padding: 10px;
-  /* border: 2px solid rgb(0, 30, 255); */
 }
 .projects-card img {
   max-width: 100%;
@@ -26,7 +23,6 @@ img {
   justify-content: space-around;
   flex-wrap: wrap;
   gap: 20px;
-
 }
 .projects-card ul li {
   flex: 1 1 200px;
@@ -88,7 +84,6 @@ img {
   display: none;
   position: fixed;
   z-index: 9;
-  padding-top: 100px;
   left: 0;
   top: 0;
   width: 100%;
@@ -98,7 +93,8 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  gap: 20px;
+  /* flex-direction: column; */
   color: rgb(255, 255, 255);
 }
 
@@ -122,7 +118,7 @@ img {
   transition: 0.6s;
   position: relative;
   border-radius: 5px;
-  animation: btnColor 0.8s infinite;
+  animation: btnColor 1.6s infinite;
 }
 #btnFechar .line::before {
   transform: rotate(135deg);
@@ -133,7 +129,8 @@ img {
 }
 #btnFechar .line:hover::before,
 #btnFechar .line:hover::after {
-  animation: btnColorHover 0.8s infinite;
+  animation: btnColor 2s infinite;
+  background-color: #bf0a0d;
 }
 #btnFechar .line:hover::before {
   transform: rotate(320deg);
@@ -143,33 +140,14 @@ img {
   top: -15px;
 }
 @keyframes btnColor {
-  0% {
-    background-color: var(--highlight-color);
+  from {
+    opacity: 0;
   }
-  25% {
-    background-color: #6b1ccc;
-  }
-  50% {
-    background-color: #8d40eb;
-  }
-  100% {
-    background-color: #ac67ff;
+  to {
+    opacity: 1;
   }
 }
-@keyframes btnColorHover {
-  0% {
-    background-color: var(--highlight-color);
-  }
-  25% {
-    background-color: #bf0a0d;
-  }
-  50% {
-    background-color: #e70f12;
-  }
-  100% {
-    background-color: #ff3f42;
-  }
-}
+
 .container-modal {
   display: flex;
   gap: 10px;
@@ -180,59 +158,78 @@ img {
   width: 100%;
   max-width: 1000px;
   border-radius: 5px;
+  margin-top: 1rem;
 }
 .textoModal {
-  border: 1px solid var(--bg-color);
+  flex: 1 1 800px;
+  border: 2px solid var(--accent-color);
   width: 100%;
-  max-width: 600px;
-  height: max-content;
-  padding: 10px;
-  margin-bottom: 1rem;
-  background-color: #222;
-  background-color: var(--secondary-color);
+  max-width: 700px;
+  height: 400px;
   border-radius: 5px;
-  display: flex;
-  flex-direction: column;
 
-  color: #111;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 10px;
+  align-content: start;
+
+  background-color: #222;
+  width: max-content;
+  height: max-content;
+  position: relative;
+  padding: 20px;
+}
+.textoModal .estudos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-content: start;
+  margin-top: 1rem;
 }
 .textoModal p {
-  position: relative;
-  margin-left: 18px;
-}
-.textoModal p::after {
-  content: "";
-  display: block;
-  position: absolute;
-  left: -10px;
-  width: 6px;
-  height: 4px;
-  top: 11px;
+  border-radius: 5px;
+  width: max-content;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  border-radius: 4px;
   background-color: var(--accent-color);
+  padding: 5px 10px;
+  border: 2px solid transparent;
 }
+
+.textoModal p:hover {
+  background-color: #393939;
+  border: 2px solid var(--highlight-color);
+}
+
+.textoModal i {
+  font-size: 1.5rem;
+}
+
 .linkModal {
   background-color: var(--highlight-color);
-  padding: 0.6rem 1.5rem;
+  padding: 0.8rem 3rem;
   border: none;
   border-radius: 10px;
+  display: inline-block;
+  width: max-content;
+  align-self: center;
+  margin-top: 1rem;
 }
 .linkModal:hover {
   background-color: #5c14b3;
 }
-.textoModal strong {
-  display: flex !important;
-  color: var(--highlight-color);
-}
+
 .tec {
   display: flex;
   justify-content: center;
   gap: 40px;
   margin: 1rem;
   opacity: 0;
-  transition: .5s ease-in-out;
-  /* border: 2px solid red; */
+  transition: 0.5s ease-in-out;
 }
-.tec.visible{
+.tec.visible {
   opacity: 1;
   color: var(--highlight-color);
 }
@@ -242,20 +239,8 @@ img {
 }
 
 @media (max-width: 992px) {
-  .projects-card ul li {
-    /* width: 380px; */
-  }
+  
 }
-@media (max-width: 670px) {
-  /* .projects-card ul {
-    grid-template-columns: 1fr;
-  }
-  .projects-card ul li a {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-    align-items: center;
-    justify-content: center;
-  }
-   */
+@media (max-width: 800px) {
+  
 }

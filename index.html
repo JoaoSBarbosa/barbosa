@@ -30,6 +30,7 @@
       href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
     />
   </head>
+
   <body>
     <header class="flex-row secondary-color">
       <div class="logo">
@@ -228,19 +229,19 @@
             <div class="jobs-description js-tabcontent">
               <section>
                 <h2>
-                  <i class="fa-solid fa-store"></i>
+                  <i class="fa-solid fa-shop-lock"></i>
                   Beerfanstore
                 </h2>
                 <h3>Descrição</h3>
                 <p>
-                  Site de e-commerce B2C com nicho voltado para os fãs de
+                  Site de e-commerce B2B com nicho voltado para os fãs de
                   cerveja. Site oficial de brands AMBEV
                 </p>
                 <h3>Atividades</h3>
                 <p></p>
                 <ul class="activities">
+                  <li>Lógica de controle de acesso</li>
                   <li>Criação de páginas com elementor</li>
-                  <li>Gerenciamento e criação de cupons</li>
                   <li>Instalação, configuração e testes de plugins</li>
                   <li>Desenvolvimento de nossas funções para o site</li>
                   <li>Programação em JavaScript</li>
@@ -248,12 +249,11 @@
                 </ul>
                 <div class="tec">
                   <i class="devicon-wordpress-plain"></i>
-                  <i class="devicon-javascript-plain"></i>
-                  <i class="devicon-php-plain"></i>
-                  <i class="devicon-html5-plain"></i>
-                  <i class="devicon-css3-plain"></i>
-                  <i class="devicon-filezilla-plain"></i>
                   <i class="devicon-mysql-plain"></i>
+                  <i class="devicon-php-plain"></i>
+                  <i class="devicon-css3-plain"></i>
+                  <i class="devicon-html5-plain"></i>
+                  <i class="devicon-javascript-plain"></i>
                 </div>
                 <a
                   href="https://beerfanstore.com.br/"
@@ -303,6 +303,32 @@
       </div>
     </section>
 
+    <section id="section--slider">
+      <div data-slide="slide" class="slide">
+        <div class="slide-items">
+          <a href="">
+            <img
+              src="assets/img/job.jpg"
+              alt=""
+            />
+          </a>
+          <a href="">
+            <img
+              src="assets/img/job2.jpg"
+              alt=""
+            />
+          </a>
+        </div>
+        <nav class="slide-nav">
+          <div class="slide-thumb">
+  
+          </div>
+          <button class="slide-prev">Anterior</button>
+          <button class="slide-next">Proxima</button>
+        </nav>
+      </div>
+    </section>
+
     <section class="projects" id="projetos">
       <div class="about-title">
         <h1>Projetos</h1>
@@ -315,6 +341,7 @@
       </div>
       <div class="projects-card">
         <ul aria-label="Navegação Secundaria">
+          <!--Projeto 1-->
           <li class="projeto">
             <h3>Bikcraft</h3>
             <figure class="projeto-img">
@@ -325,15 +352,41 @@
             </figure>
             <div class="modalHide">
               <div>
-                <p>Lorem ipsum dolor sit amet</p>
-                <p>sapiente provident perferendi</p>
+                <span class="first">
+                  Versão final do site fictício Bakcraft. <br />O site é
+                  totalmente responsivo, acessível e com efeitos de transição e
+                  load. Estudos alcançados:
+                </span>
+                <div class="estudos">
+                  <p>CSS Position</p>
+                  <p>GRID Column avançado</p>
+                  <p>Flexbox avançado</p>
+                  <p>Align e Justify</p>
+                  <p>Responsividade</p>
+                  <p>Acessibilidade</p>
+                  <p>Menu mobile</p>
+                  <p>Variáveis</p>
+                  <p>TypeScript</p>
+                  <p>EventListener (Click, Load, Hover)</p>
+                  <p>Plugins</p>
+                </div>
               </div>
-              <a href="https://joaosbarbosa.github.io/bakcraft-project/">
+              <a
+                href="https://joaosbarbosa.github.io/bakcraft-project/"
+                target="_blank"
+                title="Ir ao projeto"
+                class="linkModal"
+              >
                 Confira
               </a>
             </div>
+            <div class="tec">
+              <i class="devicon-html5-plain"></i>
+              <i class="devicon-css3-plain"></i>
+              <i class="devicon-javascript-plain"></i>
+            </div>
           </li>
-
+          <!--Projeto 2-->
           <li class="projeto">
             <h3>Animais Fantasticos</h3>
             <figure class="projeto-img">
@@ -344,15 +397,34 @@
             </figure>
             <div class="modalHide">
               <div>
-                <p>Lorem ipsum dolor sit amet</p>
-                <p>sapiente provident perferendi</p>
+                <span class="first"
+                  >Trata-se de site que apresenta alguns dos animais mais
+                  incríveis e suas características. Os estudos abordam:
+                </span>
+                <div class="estudos">
+                  <p>eventos de clicks</p>
+                  <p>Ecentos de Scrolls</p>
+                  <p>Métodos e funções JavaScript</p>
+                  <p>Efeitos de load</p>
+                  <p>Display grid avançado</p>
+                </div>
               </div>
-              <a href="https://joaosbarbosa.github.io/animais-fantastico/">
+              <a
+                href="https://joaosbarbosa.github.io/animais-fantastico/"
+                target="_blank"
+                title="Ir ao projeto"
+                class="linkModal"
+              >
                 Confira
               </a>
             </div>
+            <div class="tec">
+              <i class="devicon-html5-plain"></i>
+              <i class="devicon-css3-plain"></i>
+              <i class="devicon-javascript-plain"></i>
+            </div>
           </li>
-
+          <!--Projeto 3-->
           <li class="projeto">
             <h3>Pizzaria</h3>
             <figure class="projeto-img">
@@ -363,22 +435,36 @@
             </figure>
             <div class="modalHide">
               <div>
-                Sistema de comprar pizzas com os seguintes recursos:
-
-                <p>Adicionar pizzas ao carrinho</p>
-                <p>
-                  Altere a quantidade de pizza antes e depois de adicionar ao
-                  carrinho
-                </p>
-                <p>Remover pizzas do carrinho</p>
-                <p>Appcar descontos</p>
-                <p>Informar o valor total e o valor parcial</p>
-
-                Projeito feito com HTML, JAVASCRIPT puro e CSS
+                <span class="first">
+                  Sistema de comprar pizzas com os seguintes recursos:</span
+                >
+                <div class="estudos">
+                  <p>Adicionar pizzas ao carrinho</p>
+                  <p>
+                    Altere a quantidade de pizza antes e depois de adicionar ao
+                    carrinho
+                  </p>
+                  <p>Remover pizzas do carrinho</p>
+                  <p>Aplicar descontos</p>
+                  <p>Informar o valor total e o valor parcial</p>
+                </div>
               </div>
-              <a href="https://barbosapizzas.netlify.app/"> Confira </a>
+              <a
+                href="https://barbosapizzas.netlify.app/"
+                target="_blank"
+                title="Ir ao projeto"
+                class="linkModal"
+              >
+                Confira
+              </a>
+            </div>
+            <div class="tec">
+              <i class="devicon-html5-plain"></i>
+              <i class="devicon-css3-plain"></i>
+              <i class="devicon-javascript-plain"></i>
             </div>
           </li>
+          <!--Projeto 4-->
           <li class="projeto">
             <h3>Consulta de Clima</h3>
             <figure class="projeto-img">
@@ -389,48 +475,23 @@
             </figure>
             <div class="modalHide">
               <div>
-                <p>Lorem ipsum dolor sit amet</p>
-                <p>sapiente provident perferendi</p>
+                <span class="first"
+                  >Projeto em JavaScript utilizando uma API do site Open
+                  Weather. Estudos alcançados:
+                </span>
+                <div class="estudos">
+                  <p>Consumo de API</p>
+                  <p>Fecth</p>
+                  <p>Ansync/Await</p>
+                  <p>EventListener</p>
+                </div>
               </div>
-              <a href="https://joaosbarbosa.github.io/animais-fantastico/">
-                Confira
-              </a>
-            </div>
-          </li>
-          <li class="projeto">
-            <h3>Starbucks</h3>
-            <figure class="projeto-img">
-              <img src="assets/img/projeto5.png" alt="Projeto Starbucks" />
-            </figure>
-            <div class="modalHide">
-              <div>
-                Este projeto visa recriar um layout da Starbucks com as
-                seguintes finalidades:
-                <p>Treinar o bom uso do display grid</p>
-                <p>Treinar responsividade</p>
-                <p>Estudar boas práticas de desenvolvimentos</p>
-              </div>
-              <a href="https://project-starbucks.netlify.app/"> Confira </a>
-            </div>
-          </li>
-          <li class="projeto">
-            <h3>Cyberdine</h3>
-            <figure class="projeto-img">
-              <img src="assets/img/projeto6.png" alt="Projeto cyberdine" />
-            </figure>
-            <div class="modalHide">
-              <div>
-                Projete um site fictício totalmente responsivo desenvolvido
-                usando <strong>HTML</strong><strong>CSS</strong>
-                <strong>JAVASCIPT</strong> para treinar:
-                <p>Bom uso de variáveis</p>
-                <p>Responsividade</p>
-                <p>Reutilização de códigos</p>
-                <p>Posicionamento de elementos</p>
-                <p>Lorem ipsum dolor sit amet</p>
-                <p>sapiente provident perferendi</p>
-              </div>
-              <a href="https://cyberdynesystemv2.netlify.app/home.html">
+              <a
+                href="https://climaproject.netlify.app/"
+                target="_blank"
+                title="Ir ao projeto"
+                class="linkModal"
+              >
                 Confira
               </a>
             </div>
@@ -440,6 +501,74 @@
               <i class="devicon-javascript-plain"></i>
             </div>
           </li>
+          <!--Projeto 5-->
+          <li class="projeto">
+            <h3>Starbucks</h3>
+            <figure class="projeto-img">
+              <img src="assets/img/projeto5.png" alt="Projeto Starbucks" />
+            </figure>
+            <div class="modalHide">
+              <div>
+                <span class="first"
+                  >Este projeto visa recriar um layout da Starbucks com as
+                  seguintes finalidades:</span
+                >
+                <div class="estudos">
+                  <p>Treinar o bom uso do display grid</p>
+                  <p>Treinar responsividade</p>
+                  <p>Estudar boas práticas de desenvolvimentos</p>
+                </div>
+              </div>
+              <a
+                href="https://project-starbucks.netlify.app/"
+                target="_blank"
+                title="Ir ao projeto"
+                class="linkModal"
+              >
+                Confira
+              </a>
+            </div>
+            <div class="tec">
+              <i class="devicon-html5-plain"></i>
+              <i class="devicon-css3-plain"></i>
+              <i class="devicon-javascript-plain"></i>
+            </div>
+          </li>
+          <!--Projeto 6-->
+          <li class="projeto">
+            <h3>Cyberdine</h3>
+            <figure class="projeto-img">
+              <img src="assets/img/projeto6.png" alt="Projeto cyberdine" />
+            </figure>
+            <div class="modalHide">
+              <div>
+                <span class="first"
+                  >Projete um site fictício totalmente responsivo Estudos
+                  alcançados:</span
+                >
+                <div class="estudos">
+                  <p>Bom uso de variáveis</p>
+                  <p>Responsividade</p>
+                  <p>Reutilização de códigos</p>
+                  <p>Posicionamento de elementos</p>
+                </div>
+              </div>
+              <a
+                href="https://cyberdynesystemv2.netlify.app/home.html"
+                target="_blank"
+                title="Ir ao projeto"
+                class="linkModal"
+              >
+                Confira
+              </a>
+            </div>
+            <div class="tec">
+              <i class="devicon-html5-plain"></i>
+              <i class="devicon-css3-plain"></i>
+              <i class="devicon-javascript-plain"></i>
+            </div>
+          </li>
+          <!--Projeto 7-->
           <li class="projeto">
             <h3>Urna Eletronica</h3>
             <figure class="projeto-img">
@@ -450,65 +579,115 @@
             </figure>
             <div class="modalHide">
               <div>
-                Projete um site fictício totalmente responsivo desenvolvido
-                usando <span>HTML</span>, <span>CSS</span> e
-                <span>JAVASCRIPT</span> para treinar:
-                <p>Bom uso de variáveis</p>
-                <p>Responsividade</p>
-                <p>Reutilização de códigos</p>
-                <p>Posicionamento de elementos</p>
-                <p>Lorem ipsum dolor sit amet</p>
-                <p>sapiente provident perferendi</p>
+                <span> Projete um sistema de urna eletrônica fake: </span>
+                <br />
+                <div class="estudos">
+                  <p>Eventos JavaScript</p>
+                  <p>Objetos</p>
+                  <p>Funções de array</p>
+                  <p>Responsividade</p>
+                </div>
               </div>
-              <a href="https://cyberdynesystemv2.netlify.app/home.html">
+              <a
+                href="https://cyberdynesystemv2.netlify.app/home.html"
+                target="_blank"
+                title="Ir ao projeto"
+                class="linkModal"
+              >
                 Confira
               </a>
             </div>
+
             <div class="tec">
               <i class="devicon-html5-plain"></i>
               <i class="devicon-css3-plain"></i>
               <i class="devicon-javascript-plain"></i>
             </div>
           </li>
+          <!--Projeto 8-->
           <li class="projeto">
             <h3>Galeria de Imagens</h3>
+
             <figure class="projeto-img">
               <img
                 src="assets/img/projeto8.png"
                 alt="Projeto de uma galeria de imagens com sass"
               />
             </figure>
+
             <div class="modalHide">
               <div>
-                <p>Lorem ipsum dolor sit amet</p>
-                <p>sapiente provident perferendi</p>
+                <div class="first">
+                  Galeria de imagem no intuito de estudar o uso de Sass.
+                  <br /><br />Estudos alcançados:
+                  <hr />
+                </div>
+
+                <div class="estudos">
+                  <p>Pré-processador Sass</p>
+                  <p>Variáveis</p>
+                  <p>Nesting</p>
+                  <p>Mixins</p>
+                  <p>Heranças</p>
+                  <p>Operadores de seleção</p>
+                </div>
+
+                <a
+                  href="https://galerias.netlify.app/"
+                  target="_blank"
+                  title="Ir ao projeto"
+                  class="linkModal"
+                >
+                  Confira
+                </a>
               </div>
-              <a href="https://joaosbarbosa.github.io/animais-fantastico/">
-                Confira
-              </a>
             </div>
+
             <div class="tec">
               <i class="devicon-html5-plain"></i>
               <i class="devicon-css3-plain"></i>
-              <i class="devicon-javascript-plain"></i>
+              <i class="devicon-sass-original"></i>
             </div>
           </li>
+
           <li class="projeto">
             <h3>MadLand</h3>
+
             <figure class="projeto-img">
               <img
                 src="assets/img/projeto9.png"
                 alt="Projeto um site hospitalar"
               />
             </figure>
+
             <div class="modalHide">
               <div>
-                <p>Lorem ipsum dolor sit amet</p>
-                <p>sapiente provident perferendi</p>
+                <div class="first">
+                  Site fictício de um hospital chamado MadicLand. Desenvolvido.
+                </div>
+
+                <div class="estudos">
+                  <p>Display flex</p>
+                  <p>Position</p>
+                  <p>Responsividade</p>
+                  <p>variáveis CSS</p>
+                  <p>Eventos js</p>
+                </div>
               </div>
-              <a href="https://joaosbarbosa.github.io/animais-fantastico/">
+              <a
+                href="https://medicland.netlify.app/"
+                target="_blank"
+                title="Ir ao projeto"
+                class="linkModal"
+              >
                 Confira
               </a>
+            </div>
+
+            <div class="tec">
+              <i class="devicon-html5-plain"></i>
+              <i class="devicon-css3-plain"></i>
+              <i class="devicon-javascript-plain"></i>
             </div>
           </li>
           <li class="projeto">
@@ -521,13 +700,38 @@
               />
             </figure>
             <div class="modalHide">
-              <div>
-                <p>Lorem ipsum dolor sit amet</p>
-                <p>sapiente provident perferendi</p>
+              <div class="first">
+                Portfólio profissional desenvolvido para colocar em prática todo
+                o conhecimento que adquiro nos cursos. O site é totalmente
+                responsivo, acessível e com tratamento de possiveis erros
               </div>
-              <a href="https://joaosbarbosa.github.io/portfolio-barbosa/">
+              <div class="estudos">
+                <p>CSS Position</p>
+                <p>Display GRID</p>
+                <p>Flexbox</p>
+                <p>Align/Justify</p>
+                <p>Responsividade</p>
+                <p>Acessibilidade</p>
+                <p>Variáveis</p>
+                <p>JavaScript</p>
+                <p>Eventos</p>
+                <p>Plugins</p>
+                <p>Compilador de CSS</p>
+              </div>
+
+              <a
+                href="https://joaosbarbosa.github.io/portfolio-barbosa/"
+                target="_blank"
+                title="Ir ao projeto"
+                class="linkModal"
+              >
                 Confira
               </a>
+            </div>
+            <div class="tec">
+              <i class="devicon-html5-plain"></i>
+              <i class="devicon-css3-plain"></i>
+              <i class="devicon-javascript-plain"></i>
             </div>
           </li>
         </ul>
@@ -541,19 +745,14 @@
           <figure class="container-modal">
             <img src="assets/img/projeto1.png" alt="" class="imagModal" />
           </figure>
-          <div class="textoModal">
-            projeto desenvolvido utilizando as modernas tecnologias de
-            JavaScript
-          </div>
-          <a href="" target="_blank" title="Ir ao projeto" class="linkModal"
-            >Confira</a
-          >
+          <div class="textoModal"></div>
         </div>
       </div>
     </section>
     <div class="scroll-button">
       <i class="fa-solid fa-arrow-up"></i>
     </div>
+    <script src="assets/js/slide.js"></script>
     <script src="assets/js/script.js"></script>
   </body>
 </html>
