@@ -18,6 +18,8 @@
   gap: 10px 20px;
   margin-top: 10px;
   background-color: #222;
+  background-color: #000;
+
   position: relative;
   padding: 20px;
   margin-bottom: 4rem;
@@ -70,6 +72,12 @@
   border-radius: 4px;
   background-color: var(--accent-color);
   padding: 5px 10px;
+  border: 1px solid transparent;
+}
+.empresa-habilidades li:hover {
+  border: 1px solid var(--highlight-color);
+  color: var(--highlight-color);
+  background-color: transparent;
 }
 .projetos-empresa {
   grid-column: 1/-1;
@@ -132,6 +140,8 @@
 }
 .jobs-description {
   background-color: #222;
+  background-color: #000;
+
   padding: 20px;
   border-radius: 5px;
   color: var(--accent-color);
@@ -326,7 +336,7 @@
   .card-experiencia {
     grid-template-columns: 1fr;
   }
-  .tecnologia{
+  .tecnologia {
     grid-row: 5;
   }
 }
@@ -341,4 +351,3 @@
     color: var(--secondary-color);
   }
 }
-

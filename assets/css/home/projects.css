@@ -30,6 +30,8 @@ img {
   align-content: center;
   justify-content: center;
   background-color: #222;
+  background-color: #000;
+
   border-radius: 4px;
   border: 2px solid rgb(182, 182, 182);
   padding: 10px;
