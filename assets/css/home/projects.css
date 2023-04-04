@@ -2,16 +2,11 @@ img {
   max-width: 100%;
   display: block;
 }
-.projects {
-  background-color: var(--bg-color);
-  color: var(--accent-color);
-  margin-top: -30px;
-  padding: 60px;
-  border-radius: 4px;
-}
+
 .projects-card {
   padding: 10px;
 }
+
 .projects-card img {
   max-width: 100%;
   object-fit: cover;
@@ -252,9 +247,6 @@ img {
 }
 
 @media (max-width: 580px) {
-  .projects {
-    padding: 40px;
-  }
   .container-modal {
     width: calc(100% - 10px);
     justify-content: center;
@@ -282,9 +274,6 @@ img {
   }
 }
 @media (max-width: 470px) {
-  .projects {
-    padding: 20px;
-  }
   #janelaModal {
     background-color: rgba(19, 19, 19, 0.9);
   }

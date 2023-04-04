@@ -6,7 +6,9 @@
    --highlight-color: #711CDB;
    --bg-color: #111;
 }
-
+.accent-color{
+   color: var(--accent-color);
+}
 .primary-color{
    color: var(--primary-color);
 }

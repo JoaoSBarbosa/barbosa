@@ -66,7 +66,6 @@
       class="section-curriculum js-scroll"
     >
       <div>
-        <h2>Olá ! Eu sou</h2>
         <h2 class="typing">Desenvolvedor Front-End Júnior</h2>
         <p>
           Sou um desenvolvedor front-end júnior estudando para me tornar um dev
@@ -101,21 +100,21 @@
         <img src="assets/img/foto.png" alt="Foto de João Barbosa" />
       </figure>
     </section>
-    <main class="js-scroll">
-      <article aria-label="Seção sobre mim" class="about">
-        <div class="about-title">
-          <h1>Sobre Mim</h1>
-          <p>Perfil profissional</p>
-          <div aria-label="Seção de ilustrações de botões">
-            <span></span>
-            <span></span>
-            <span></span>
+    <main class="js-scroll container">
+      <article aria-label="Seção sobre mim" class="content">
+        <div class="content-title">
+          <h1 class="title">Sobre Mim</h1>
+          <p class="caption">Perfil profissional</p>
+          <div aria-label="Seção de ilustrações de botões" class="box-nav">
+            <span class="box-nav--dots"></span>
+            <span class="box-nav--dots"></span>
+            <span class="box-nav--dots"></span>
           </div>
         </div>
         <img src="assets/img/foto2.png" alt="Segunda foto de João Barbosa" />
         <div class="about-content">
           <div class="about-text">
-            <h1>Eu sou João Barbosa</h1>
+            <h1>Olá ! Eu sou o João Barbosa</h1>
             <p>
               Profissional graduando análise e desenvolvimento de sistemas e com
               habilidades em front-end (JavaScript, TypeScript, React-js, CSS3,
@@ -162,14 +161,17 @@
         </div>
       </article>
     </main>
-    <section class="services js-scroll" id="experiencia">
-      <div class="about-title">
-        <h1>Experiências</h1>
-        <p>Registro em carteira</p>
-        <div aria-label="Seção de ilustrações de botões">
-          <span></span>
-          <span></span>
-          <span></span>
+    <section
+      class="services experiences bg--color secondary-color js-scroll"
+      id="experiencia"
+    >
+      <div class="about-title content-title">
+        <h1 class="title">Experiências</h1>
+        <p class="caption">Registro em carteira</p>
+        <div aria-label="Seção de ilustrações de botões" class="box-nav">
+          <span class="box-nav--dots"></span>
+          <span class="box-nav--dots"></span>
+          <span class="box-nav--dots"></span>
         </div>
       </div>
       <div class="experience">
@@ -393,14 +395,14 @@
       </section>
     </section>
 
-    <section class="projects" id="projetos">
-      <div class="about-title">
-        <h1>Projetos</h1>
-        <p>Perfil profissional</p>
-        <div aria-label="Seção de ilustrações de botões">
-          <span></span>
-          <span></span>
-          <span></span>
+    <section class="projects experiences bg--color accent-color" id="projetos">
+      <div class="about-title content-title">
+        <h1 class="title">Projetos</h1>
+        <p class="caption">Perfil profissional</p>
+        <div aria-label="Seção de ilustrações de botões" class="box-nav">
+          <span class="box-nav--dots"></span>
+          <span class="box-nav--dots"></span>
+          <span class="box-nav--dots"></span>
         </div>
       </div>
       <div class="projects-card">
@@ -411,30 +413,29 @@
             <figure class="projeto-img">
               <img
                 src="assets/img/projeto1.png"
-                alt="Projeto de um site e-commerce de bicicletas e seguros"
+                alt="Projeto de um site falando sobre animais incriveis"
               />
             </figure>
             <div class="modalHide">
-              <div>
-                <span class="first">
-                  Versão final do site fictício Bakcraft. <br />O site é
-                  totalmente responsivo, acessível e com efeitos de transição e
-                  load.
-                </span>
-                <div class="estudos">
-                  <p>CSS Position</p>
-                  <p>GRID Column avançado</p>
-                  <p>Flexbox avançado</p>
-                  <p>Align e Justify</p>
-                  <p>Responsividade</p>
-                  <p>Acessibilidade</p>
-                  <p>Menu mobile</p>
-                  <p>Variáveis</p>
-                  <p>TypeScript</p>
-                  <p>EventListener (Click, Load, Hover)</p>
-                  <p>Plugins</p>
-                </div>
+              <div class="first port">
+                Versão final do site fictício Bakcraft. <br />O site é
+                totalmente responsivo, acessível e com efeitos de transição e
+                load.
               </div>
+              <div class="estudos">
+                <p>CSS Position</p>
+                <p>GRID Column avançado</p>
+                <p>Flexbox avançado</p>
+                <p>Align e Justify</p>
+                <p>Responsividade</p>
+                <p>Acessibilidade</p>
+                <p>Menu mobile</p>
+                <p>Variáveis</p>
+                <p>TypeScript</p>
+                <p>EventListener (Click, Load, Hover)</p>
+                <p>Plugins</p>
+              </div>
+
               <a
                 href="https://joaosbarbosa.github.io/bakcraft-project/"
                 target="_blank"
@@ -450,6 +451,7 @@
               <i class="devicon-javascript-plain"></i>
             </div>
           </li>
+
           <!--Projeto 2-->
           <li class="projeto">
             <h3>Animais Fantasticos</h3>
@@ -499,9 +501,7 @@
             </figure>
             <div class="modalHide">
               <div>
-                <span class="first">
-                  Sistema de comprar pizzas</span
-                >
+                <span class="first"> Sistema de comprar pizzas</span>
                 <div class="estudos">
                   <p>Adicionar pizzas ao carrinho</p>
                   <p>
@@ -574,7 +574,8 @@
             <div class="modalHide">
               <div>
                 <span class="first"
-                  >Este projeto visa recriar um layout da Starbucks com funcionalidades básicas.</span
+                  >Este projeto visa recriar um layout da Starbucks com
+                  funcionalidades básicas.</span
                 >
                 <div class="estudos">
                   <p>Treinar o bom uso do display grid</p>
@@ -750,7 +751,7 @@
               <i class="devicon-javascript-plain"></i>
             </div>
           </li>
-          <li class="projeto" >
+          <li class="projeto">
             <h3>Portfólio</h3>
 
             <figure class="projeto-img">
@@ -809,6 +810,19 @@
         </div>
       </div>
     </section>
+
+    <section class="services js-scroll" id="experiencia">
+      <div class="about-title">
+        <h1>Formação</h1>
+        <p>Registro em carteira</p>
+        <div aria-label="Seção de ilustrações de botões">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </section>
+
     <div class="scroll-button">
       <i class="fa-solid fa-arrow-up"></i>
     </div>

@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap");
+.bg--color {
+  background-color: var(--bg-color);
+}
+/*seção total*/
+.container {
+  background-color: var(--bg-color);
+  border-radius: 4px;
+}
+/*seção do conteudo*/
+.content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.87rem;
+  justify-content: center;
+  padding: 2.5rem;
+
+  margin-top: 3.75rem;
+}
+/*seção do titulo*/
+.content-title {
+  margin: 1.87rem 0;
+  grid-column: 1/-1;
+  text-align: center;
+  color: var(--secondary-color);
+}
+/*Estilização do titulo*/
+.title {
+  font-size: 2.5rem;
+  color: var(--highlight-color);
+  margin-bottom: 0.93rem;
+  font-family: "Berkshire Swash", cursive;
+}
+/*Estilização do subtitulo*/
+
+.caption {
+  color: var(--accent-color);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+/*Estilização navegação de slider*/
+.box-nav {
+  display: flex;
+  justify-content: center;
+  gap: var(--gap);
+}
+.box-nav--dots {
+  display: block;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: var(--highlight-color);
+}
+
+.experiences {
+  padding: 60px;
+}
+@media (max-width: 580px) {
+  .experiences {
+    padding: 40px;
+  }
+}
+@media (max-width: 470px) {
+  .experiences {
+    padding: 10px;
+  }
+  
+}

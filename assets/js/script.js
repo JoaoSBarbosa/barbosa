@@ -108,8 +108,6 @@ function initLinksInterno() {
 }
 initLinksInterno();
 
-// Lista projetos
-
 function initTabNav() {
   const tabMenu = document.querySelectorAll(".js-tabmenu li");
   const tabConteudo = document.querySelectorAll(".js-tabcontent section");
@@ -136,25 +134,22 @@ initTabNav();
 
 // Modal
 function initModal() {
-  const modal = document.querySelector("#janelaModal"); // Toda a div modal
-  // Botão fechar modal
+  const modal = document.querySelector("#janelaModal");
   const closeModal = document.querySelector("#btnFechar");
-  // <img> no modal
   const imgModal = document.querySelector(".container-modal img");
-  // Div de texto modal
   const textModal = document.querySelector(".textoModal");
-  // const linkModal = document.querySelector(".linkModal");
   const liModal = document.querySelectorAll(".projeto");
 
   function modalClique(e) {
     const pModal = e.currentTarget.querySelector(".modalHide");
     const src = e.currentTarget.querySelector("img").getAttribute("src");
     textModal.classList.remove("height");
-    if (
-      e.currentTarget.querySelector(".modalHide div").classList.contains("port")
-    ) {
-      textModal.classList.add("height");
-    }
+    const m = e.currentTarget.querySelectorAll(".modalHide div");
+    m.forEach((card) => {
+      if (card.classList.contains("port")) {
+        textModal.classList.add("height");
+      }
+    });
 
     textModal.innerHTML = pModal.innerHTML;
     modal.style.display = "flex";
