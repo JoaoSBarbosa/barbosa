@@ -169,6 +169,7 @@ function initModal() {
   liModal.forEach((li) => {
     li.addEventListener("click", modalClique);
     li.addEventListener("mouseover", tecHover);
+    li.addEventListener("touchstart", tecHover);
     li.addEventListener("mouseout", tecOut);
   });
 

@@ -241,7 +241,7 @@ img {
   }
   .textoModal {
     width: calc(100% - 100px);
-    max-height: 400px;
+    max-height: 350px;
     overflow-x: scroll;
     display: grid;
     flex-direction: column;
@@ -284,5 +284,14 @@ img {
 @media (max-width: 470px) {
   .projects {
     padding: 20px;
+  }
+  #janelaModal {
+  background-color: rgba(19, 19, 19, 0.9);
+  }
+  .textoModal {
+    max-height: 325px;
+  }
+  .textoModal .estudos {
+    display: none;
   }
 }
