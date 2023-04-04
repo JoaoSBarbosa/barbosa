@@ -93,7 +93,6 @@ img {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  /* flex-direction: column; */
   color: rgb(255, 255, 255);
 }
 
@@ -236,17 +235,53 @@ img {
 .modalHide {
   display: none;
 }
+@media (max-width: 1000px) {
+  #janelaModal {
+    flex-direction: column;
+  }
+  .textoModal {
+    width: calc(100% - 100px);
+    max-height: 400px;
+    overflow-x: scroll;
+    display: grid;
+    flex-direction: column;
+  }
+  .imagModal {
+    width: 90%;
+  }
+}
 
-@media (max-width: 830px) {
-}
-@media (max-width: 692px) {
-}
 @media (max-width: 580px) {
   .projects {
     padding: 40px;
   }
+  .container-modal {
+    width: calc(100% - 10px);
+    justify-content: center;
+    align-items: center;
+  }
+  .imagModal {
+    width: calc(100% - 40px);
+  }
+  .textoModal {
+    width: calc(100% - 40px);
+    padding: 20px;
+    overflow-x: hidden;
+  }
+  .textoModal::-webkit-scrollbar {
+    width: 18px;
+  }
+  .textoModal::-webkit-scrollbar-thumb {
+    background: var(--highlight-color);
+    border-left: 4px solid var(--bg-color);
+    border-right: 4px solid var(--bg-color);
+    border-radius: 7px;
+  }
+  .textoModal::-webkit-scrollbar-track {
+    background: var(--bg-color);
+  }
 }
-@media (max-width: 470px){
+@media (max-width: 470px) {
   .projects {
     padding: 10px;
   }
