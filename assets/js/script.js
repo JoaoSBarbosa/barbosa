@@ -143,15 +143,23 @@ function initModal() {
   const imgModal = document.querySelector(".container-modal img");
   // Div de texto modal
   const textModal = document.querySelector(".textoModal");
-  const linkModal = document.querySelector(".linkModal");
+  // const linkModal = document.querySelector(".linkModal");
   const liModal = document.querySelectorAll(".projeto");
-  const modalHidde = document.querySelector(".modalHide");
 
   function modalClique(e) {
     const pModal = e.currentTarget.querySelector(".modalHide");
-    const clone = pModal.cloneNode(true);
-    console.log(clone);
     const src = e.currentTarget.querySelector("img").getAttribute("src");
+
+    console.log(e.currentTarget.querySelector(".modalHide div"));
+    if (
+      e.currentTarget.querySelector(".modalHide div").classList.contains("port")
+    ) {
+      console.log("contém");
+      // e.currentTarget.querySelector(".modalHide div .port").style.boder = "red";
+      const port = e.currentTarget.querySelector(".modalHide");
+      textModal.classList.add("teste");
+      console.log(port);
+    }
 
     textModal.innerHTML = pModal.innerHTML;
     modal.style.display = "flex";
