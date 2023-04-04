@@ -9,6 +9,9 @@ class SlideStories {
     this.active = index;
     this.items.forEach((item) => item.classList.remove("active"));
     this.items[index].classList.add("active");
+
+    this.thumbItems.forEach((tb) => tb.classList.remove("active"));
+    this.thumbItems[index].classList.add("active");
   }
 
   prev() {
@@ -33,8 +36,9 @@ class SlideStories {
     nextBtn.addEventListener("click", this.next);
     prevBtn.addEventListener("click", this.prev);
   }
-  addThumbItems(){
-   this.items.forEach(()=> (this.thumb.innerHTML += '<span></span>'));
+  addThumbItems() {
+    this.items.forEach(() => (this.thumb.innerHTML += "<span></span>"));
+    this.thumbItems = Array.from(this.thumb.children);
   }
 
   init() {
@@ -42,6 +46,7 @@ class SlideStories {
     this.prev = this.prev.bind(this);
     this.items = this.slide.querySelectorAll(".slide-items > *");
     this.thumb = this.slide.querySelector(".slide-thumb");
+    this.addThumbItems();
     this.activeSlide(0);
     this.addNavigation();
   }

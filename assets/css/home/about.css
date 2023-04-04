@@ -109,7 +109,6 @@ main .about {
   display: inline-block;
   padding-right: 15px;
   font-size: 1.5rem;
-
 }
 
 @keyframes aboutSection {
@@ -161,5 +160,10 @@ main .about {
   }
   .about-info a:hover::after {
     width: 100%;
+  }
+}
+@media (max-width: 470px) {
+  main .about {
+    padding: 20px;
   }
 }

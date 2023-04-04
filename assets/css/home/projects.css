@@ -238,9 +238,17 @@ img {
   display: none;
 }
 
-@media (max-width: 992px) {
-  
+@media (max-width: 830px) {
 }
-@media (max-width: 800px) {
-  
+@media (max-width: 692px) {
+}
+@media (max-width: 580px) {
+  .projects {
+    padding: 40px;
+  }
+}
+@media (max-width: 470px){
+  .projects {
+    padding: 10px;
+  }
 }
