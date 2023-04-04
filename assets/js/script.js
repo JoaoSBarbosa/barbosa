@@ -149,11 +149,11 @@ function initModal() {
   function modalClique(e) {
     const pModal = e.currentTarget.querySelector(".modalHide");
     const src = e.currentTarget.querySelector("img").getAttribute("src");
-
+    textModal.classList.remove("height");
     if (
       e.currentTarget.querySelector(".modalHide div").classList.contains("port")
     ) {
-      textModal.classList.add("teste");
+      textModal.classList.add("height");
     }
 
     textModal.innerHTML = pModal.innerHTML;

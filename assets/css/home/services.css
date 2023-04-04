@@ -310,7 +310,7 @@
   border-radius: 3px;
   background-color: #9000ff;
   transform: translateX(-100px);
-  animation: thumb 5s forwards linear;
+  animation: thumb 4s forwards linear;
 }
 @keyframes thumb {
   to {
