@@ -150,15 +150,10 @@ function initModal() {
     const pModal = e.currentTarget.querySelector(".modalHide");
     const src = e.currentTarget.querySelector("img").getAttribute("src");
 
-    console.log(e.currentTarget.querySelector(".modalHide div"));
     if (
       e.currentTarget.querySelector(".modalHide div").classList.contains("port")
     ) {
-      console.log("contém");
-      // e.currentTarget.querySelector(".modalHide div .port").style.boder = "red";
-      const port = e.currentTarget.querySelector(".modalHide");
       textModal.classList.add("teste");
-      console.log(port);
     }
 
     textModal.innerHTML = pModal.innerHTML;
