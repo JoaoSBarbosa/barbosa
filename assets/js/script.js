@@ -17,6 +17,15 @@ function initMobileMenu() {
   }
   btnMobile.addEventListener("click", toggleMenu);
   btnMobile.addEventListener("touchstart", toggleMenu);
+
+  const navClose = document.querySelector(".menu");
+  const clickMenu = document.querySelectorAll(".menu-navigation a");
+  function closeMenu(a) {
+    navClose.classList.remove("ativo");
+  }
+  clickMenu.forEach((a) => {
+    a.addEventListener("click", closeMenu);
+  });
 }
 initMobileMenu();
 
@@ -170,5 +179,3 @@ function initModal() {
   fecharModal();
 }
 initModal();
-
-
