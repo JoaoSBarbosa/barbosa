@@ -56,6 +56,10 @@
 }
 .empresa-titulo i {
   width: 25px;
+  display: flex;
+  justify-content: center;
+  color: var(--highlight-color);
+
 }
 .card-experiencia p {
   color: var(--accent-color);
