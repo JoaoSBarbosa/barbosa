@@ -6,20 +6,11 @@
   padding: 120px 20px;
   position: relative;
 }
-.formacao-container::after {
-  content: "";
-  display: block;
-  width: 130px;
-  height: 100px;
-  background: url("../img/detalhe.svg") no-repeat center;
-  position: absolute;
-  bottom: -50px;
-  left: 20px;
-}
+
 .formacao-texto {
   color: var(--accent-color);
-  border: 2px solid red;
   align-self: flex-end;
+  margin: 1rem 0;
 }
 .formacao-texto strong {
   color: var(--secondary-color);
@@ -71,7 +62,6 @@
   font-size: 0.875rem;
   line-height: 1.4;
   color: #8f8f8f;
-  /* color: var(--highlight-color); */
   text-transform: uppercase;
   margin-bottom: 30px;
   position: relative;
@@ -105,4 +95,10 @@
 
 .idiomas h3::before {
   background: url("../../img/idiomas.svg") no-repeat center center;
+}
+@media (max-width: 470px) {
+  .formacao-extra h3::before {
+    position: initial;
+    margin-bottom: 10px;
+  }
 }
