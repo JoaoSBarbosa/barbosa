@@ -3,7 +3,7 @@
   color: var(--secondary-color);
 }
 .formacao-container {
-  padding: 120px 20px;
+  padding: 20px;
   position: relative;
 }
 
@@ -95,6 +95,19 @@
 
 .idiomas h3::before {
   background: url("../../img/idiomas.svg") no-repeat center center;
+}
+
+.skill-container {
+  background-color: #000;
+  border-radius: 4px;
+}
+.skill-container ul li {
+  color: var(--accent-color);
+  border-bottom: 2px solid var(--bg-color);
+  transition: all 0.5s;
+}
+.skill-container ul li:hover {
+  color: var(--tertiary-color);
 }
 @media (max-width: 470px) {
   .formacao-extra h3::before {
